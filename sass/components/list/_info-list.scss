@@ -1,0 +1,26 @@
+.info-list {
+  @extend %list;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: $pre-link-margin;
+    background-color: $primary-pre-title-color;
+  }
+}
+
+.info-list__item:not(:first-child) {
+  margin-left: $pre-link-margin;
+}
+
+.info-list__link {
+  @include link(none);
+  color: $primary-pre-title-color;
+  transition: color $general-transition-time $primary-cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}

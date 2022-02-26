@@ -1,0 +1,24 @@
+.logo {
+  @include link(none);
+  position: relative;
+  display: block;
+  width: 66px;
+  height: 56px;
+  margin-right: 70px;
+  color: $primary-title-color;
+  border-radius: 45%;
+}
+
+.logo__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: currentColor;
+  transition: transform ($general-transition-time * 2) $primary-cubic-bezier,
+    color ($general-transition-time * 2) $primary-cubic-bezier;
+  .logo:hover &,
+  .logo:focus & {
+    transform: scale(1.5) rotateZ(360deg);
+    color: $accent-text-color;
+  }
+}

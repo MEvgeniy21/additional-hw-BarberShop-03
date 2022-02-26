@@ -1,0 +1,52 @@
+/* секция hero */
+.hero__container {
+  display: flex;
+}
+
+.hero__info {
+  display: flex;
+  width: 97px;
+  align-items: flex-end;
+  padding-bottom: 40px;
+}
+
+.hero__info-list {
+  transform-origin: bottom left;
+  transform: rotate(-90deg) translateY(42px);
+}
+
+.hero__body {
+  max-width: 1073px;
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 96px;
+  padding-right: 452px;
+  background-color: $first-bg-color;
+  background-image: linear-gradient($hero-overlay, $hero-overlay), url(../images/slider-img-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__pre-title {
+  margin-bottom: $spacing-between-paragraphs;
+  color: $hero-pre-title-color;
+
+  &::before {
+    background-color: $hero-pre-title-color;
+  }
+}
+
+.hero__title {
+  margin-bottom: $spacing-between-paragraphs;
+  font-family: $primary-title-font;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: $hero-title-color;
+}
+
+.hero__text {
+  color: $hero-text-color;
+}

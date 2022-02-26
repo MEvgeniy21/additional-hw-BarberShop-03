@@ -1,0 +1,51 @@
+/* секция about */
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+}
+
+.about__container {
+  display: flex;
+}
+
+.about__list {
+  @extend %list;
+  display: flex;
+  padding-right: 15px;
+  flex-basis: 50%;
+}
+
+.about__item:not(:first-child) {
+  margin-left: $image-distance;
+}
+
+.about__img {
+  @extend %img;
+}
+
+.about__content {
+  padding-left: 50px;
+  padding-right: 55px;
+  flex-basis: 50%;
+}
+
+.about__pre-title {
+  margin-bottom: $spacing-between-paragraphs;
+  color: $primary-pre-title-color;
+
+  &::before {
+    background-color: $primary-pre-title-color;
+  }
+}
+
+.about__title {
+  margin-bottom: $spacing-between-paragraphs;
+  color: $primary-title-color;
+}
+
+.about__text {
+  margin-bottom: $spacing-between-paragraphs;
+}
+.about__detail {
+  margin-bottom: 40px;
+}

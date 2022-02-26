@@ -1,0 +1,19 @@
+/* секция masters */
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: $secondary-bg-color;
+}
+.masters__pre-title {
+  margin-bottom: $spacing-between-paragraphs;
+  color: $primary-pre-title-color;
+
+  &::before {
+    background-color: $primary-pre-title-color;
+  }
+}
+
+.masters__title {
+  margin-bottom: $heading-distance;
+  color: $primary-title-color;
+}

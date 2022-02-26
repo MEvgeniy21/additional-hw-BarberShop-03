@@ -1,0 +1,16 @@
+.navigation__list {
+  @extend %list;
+  display: flex;
+}
+
+.navigation__item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.navigation__link {
+  @include header-link(16px);
+}
+
+.navigation__link--active {
+  color: $accent-text-color;
+}

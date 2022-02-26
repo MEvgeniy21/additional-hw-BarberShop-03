@@ -1,0 +1,16 @@
+@mixin link($link) {
+  text-decoration: $link;
+}
+
+@mixin header-link($hl) {
+  @include link(none);
+  padding-top: $hl;
+  padding-bottom: $hl;
+  color: $first-text-color;
+  transition: color $general-transition-time $primary-cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}

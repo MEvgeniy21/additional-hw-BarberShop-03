@@ -1,12 +1,14 @@
 /* секция hero */
 .hero {
-  padding-top: 208px;
-  padding-bottom: 183px;
+  //   padding-top: 208px;
+  //   padding-bottom: 183px;
 
   @include max-media($tablet) {
     max-width: $mobile;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 208px;
+    padding-bottom: 183px;
     background-color: $first-bg-color;
     background-image: linear-gradient($hero-overlay, $hero-overlay),
       url(../images/hero/slider-img-3-480.jpg);
@@ -21,22 +23,30 @@
   }
 }
 
-// .hero__container {
-//   display: flex;
-// }
+.hero__container {
+  @include min-media($tablet) {
+    @include flex-position(flex, null, space-between);
+  }
+}
 
 .hero__info {
   display: none;
-  //   display: flex;
-  //   width: 97px;
-  //   align-items: flex-end;
-  //   padding-bottom: 40px;
+
+  @include min-media($tablet) {
+    @include flex-position(flex, end, null);
+    // display: flex;
+    width: 97px;
+    // align-items: flex-end;
+    padding-bottom: 40px;
+  }
 }
 
-// .hero__info-list {
-//   transform-origin: bottom left;
-//   transform: rotate(-90deg) translateY(42px);
-// }
+.hero__info-list {
+  @include min-media($tablet) {
+    transform-origin: bottom left;
+    transform: rotate(-90deg) translateY(42px);
+  }
+}
 
 .hero__body {
   max-width: 306px;
@@ -51,6 +61,24 @@
   //   background-repeat: no-repeat;
   //   background-position: center;
   //   background-size: cover;
+  @include min-media($tablet) {
+    max-width: 577px;
+    padding-top: 280px;
+    padding-bottom: 234px;
+    padding-left: 70px;
+    padding-right: 157px;
+    background-color: $first-bg-color;
+    background-image: linear-gradient($hero-overlay, $hero-overlay),
+      url(../images/hero/slider-img-3-577.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include retina() {
+      background-image: linear-gradient($hero-overlay, $hero-overlay),
+        url(../images/hero/slider-img-3-577@2x.jpg);
+    }
+  }
 }
 
 .hero__pre-title {

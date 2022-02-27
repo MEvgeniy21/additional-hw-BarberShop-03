@@ -1,19 +1,25 @@
 .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100vw;
-  height: 100vh;
-  background-color: $backdrop-overlay;
-  opacity: 0;
-  visibility: hidden;
+  @include max-media($tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: $backdrop-overlay;
+    opacity: 0;
+    visibility: hidden;
 
-  transition: opacity $general-transition-time $primary-cubic-bezier,
-    visibility $general-transition-time $primary-cubic-bezier;
+    transition: opacity $general-transition-time $primary-cubic-bezier,
+      visibility $general-transition-time $primary-cubic-bezier;
 
-  .menu-open & {
-    visibility: visible;
-    opacity: 1;
+    .menu-open & {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @include min-media($tablet) {
+    display: none;
   }
 }

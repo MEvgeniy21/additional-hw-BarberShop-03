@@ -1,33 +1,33 @@
-.address {
-  font-style: inherit;
-  margin-bottom: 70px;
-}
+// .address {
+//   font-style: inherit;
+//   margin-bottom: 70px;
+// }
 
-.address__list {
-  @extend %list;
-}
+// .address__list {
+//   @extend %list;
+// }
 
-.address__item:not(:last-child) {
-  margin-bottom: $spacing-between-paragraphs;
-}
+// .address__item:not(:last-child) {
+//   margin-bottom: $spacing-between-paragraphs;
+// }
 
-.address__link {
-  @include link(none);
-  display: flex;
-  align-items: center;
-  transition: color $general-transition-time $primary-cubic-bezier;
-  &--email {
-    @include link(underline);
-  }
+// .address__link {
+//   @include link(none);
+//   display: flex;
+//   align-items: center;
+//   transition: color $general-transition-time $primary-cubic-bezier;
+//   &--email {
+//     @include link(underline);
+//   }
 
-  &:hover,
-  &:focus {
-    color: $accent-text-color;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     color: $accent-text-color;
+//   }
+// }
 
-.address__icon {
-  margin-right: 16px;
-  flex-shrink: 0;
-  --color1: currentColor;
-}
+// .address__icon {
+//   margin-right: 16px;
+//   flex-shrink: 0;
+//   --color1: currentColor;
+// }

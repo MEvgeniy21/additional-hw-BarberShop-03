@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>additional-hw-BarberShop-02</title>
+    <title>additional-hw-BarberShop-03</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -31,28 +30,44 @@
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
         </a>
-        <!-- Навигация -->
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--active" href="./index.html">О нас</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#services">Услуги и цены</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#masters">Мастера</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__wrap">
-          <!-- Телефон -->
-          <a class="header__link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <!-- Кнопка -->
-          <button class="btn btn--first header__btn" type="button">онлайн-запись</button>
+        <button
+          class="header__btn-menu"
+          type="button"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="header__icon-btn" width="40" height="40">
+            <use class="header__icon-btn--close" href="./images/icons.svg#icon-close_40px"></use>
+            <use class="header__icon-btn--menu" href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+
+        <div class="header__menu" id="menu-container" data-menu>
+          <!-- Навигация -->
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--active" href="./index.html">О нас</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#services">Услуги и цены</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#masters">Мастера</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__wrap">
+            <!-- Телефон -->
+            <a class="header__link" href="tel:+380441111111">+38 044 111 11 11</a>
+            <!-- Кнопка -->
+            <button class="btn btn--first header__btn" type="button">онлайн-запись</button>
+          </div>
         </div>
       </div>
     </header>
@@ -502,5 +517,7 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop"></div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

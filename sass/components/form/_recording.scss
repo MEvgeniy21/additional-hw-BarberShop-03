@@ -1,71 +1,71 @@
-.recording {
-  padding-right: 40px;
-}
+// .recording {
+//   padding-right: 40px;
+// }
 
-.recording__wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: $heading-distance;
-}
+// .recording__wrap {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: $heading-distance;
+// }
 
-.recording__label {
-  position: relative;
+// .recording__label {
+//   position: relative;
 
-  &--textarea {
-    display: block;
-    margin-bottom: $heading-distance;
-  }
-}
+//   &--textarea {
+//     display: block;
+//     margin-bottom: $heading-distance;
+//   }
+// }
 
-.recording__text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $online-form-color;
-  transition: transform $general-transition-time $primary-cubic-bezier,
-    color $general-transition-time $primary-cubic-bezier;
+// .recording__text {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   font-weight: 600;
+//   font-size: 11px;
+//   line-height: 1.36;
+//   letter-spacing: 0.1em;
+//   text-transform: uppercase;
+//   color: $online-form-color;
+//   transition: transform $general-transition-time $primary-cubic-bezier,
+//     color $general-transition-time $primary-cubic-bezier;
 
-  .recording__input:focus + &,
-  .recording__input:hover + & {
-    color: $first-text-color;
-  }
+//   .recording__input:focus + &,
+//   .recording__input:hover + & {
+//     color: $first-text-color;
+//   }
 
-  .recording__input:focus + &,
-  .recording__input:not(:placeholder-shown) + & {
-    transform: translateY(-2em);
-  }
-}
+//   .recording__input:focus + &,
+//   .recording__input:not(:placeholder-shown) + & {
+//     transform: translateY(-2em);
+//   }
+// }
 
-.recording__input {
-  height: 24px;
-  color: $hero-text-color;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid $online-form-color;
-  transition: border $general-transition-time $primary-cubic-bezier,
-    color $general-transition-time $primary-cubic-bezier;
+// .recording__input {
+//   height: 24px;
+//   color: $hero-text-color;
+//   background-color: transparent;
+//   border: none;
+//   border-bottom: 1px solid $online-form-color;
+//   transition: border $general-transition-time $primary-cubic-bezier,
+//     color $general-transition-time $primary-cubic-bezier;
 
-  &[type='text'] {
-    width: 270px;
-  }
+//   &[type='text'] {
+//     width: 270px;
+//   }
 
-  &[type='tel'] {
-    width: 260px;
-  }
+//   &[type='tel'] {
+//     width: 260px;
+//   }
 
-  &--textarea {
-    width: 100%;
-    height: 76px;
-    resize: none;
-  }
+//   &--textarea {
+//     width: 100%;
+//     height: 76px;
+//     resize: none;
+//   }
 
-  &:focus,
-  &:hover {
-    border-bottom-color: $first-text-color;
-  }
-}
+//   &:focus,
+//   &:hover {
+//     border-bottom-color: $first-text-color;
+//   }
+// }

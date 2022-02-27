@@ -1,28 +1,28 @@
 /* секция contacts */
-.contacts {
-  width: calc((100% - #{$image-distance}) / 2);
-  padding-left: 100px;
-}
+// .contacts {
+//   width: calc((100% - #{$image-distance}) / 2);
+//   padding-left: 100px;
+// }
 
-.contacts__wrap {
-  width: 270px;
-  margin-right: auto;
-}
+// .contacts__wrap {
+//   width: 270px;
+//   margin-right: auto;
+// }
 
-.contacts__title {
-  color: $secondary-title-color;
-  margin-bottom: 40px;
-}
+// .contacts__title {
+//   color: $secondary-title-color;
+//   margin-bottom: 40px;
+// }
 
-.contacts__pre-title {
-  color: $secondary-title-color;
-  margin-bottom: $spacing-between-paragraphs;
+// .contacts__pre-title {
+//   color: $secondary-title-color;
+//   margin-bottom: $spacing-between-paragraphs;
 
-  &::before {
-    background-color: $hero-text-color;
-  }
-}
+//   &::before {
+//     background-color: $hero-text-color;
+//   }
+// }
 
-.contacts__text {
-  color: $hero-text-color;
-}
+// .contacts__text {
+//   color: $hero-text-color;
+// }

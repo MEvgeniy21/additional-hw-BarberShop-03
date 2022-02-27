@@ -1,6 +1,7 @@
-// .font-title {
-//   font-family: $primary-title-font;
-//   font-size: 42px;
-//   line-height: 1.17;
-//   letter-spacing: 0.05em;
-// }
+.font-title {
+  @include font(28px, 33px, 0.05em, null, $primary-title-font);
+
+  @include min-media($desktop) {
+    @include font(42px, 49px);
+  }
+}

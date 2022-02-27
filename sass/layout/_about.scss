@@ -1,51 +1,77 @@
 /* секция about */
-// .about {
-//   padding-top: 139px;
-//   padding-bottom: 121px;
-// }
+.about {
+  @include min-media($desktop) {
+    padding-top: 139px;
+    padding-bottom: 121px;
+  }
+}
 
-// .about__container {
-//   display: flex;
-// }
+.about__container {
+  @include min-media($tablet) {
+    @include flex-position(flex, null, space-between);
+  }
+}
 
-// .about__list {
-//   @extend %list;
-//   display: flex;
-//   padding-right: 15px;
-//   flex-basis: 50%;
-// }
+.about__list {
+  display: none;
 
-// .about__item:not(:first-child) {
-//   margin-left: $image-distance;
-// }
+  @include min-media($tablet) {
+    @include list(block);
+    flex-basis: calc((100% - 30px) / 2);
+  }
 
-// .about__img {
-//   @extend %img;
-// }
+  @include min-media($desktop) {
+    display: flex;
+  }
+}
 
-// .about__content {
-//   padding-left: 50px;
-//   padding-right: 55px;
-//   flex-basis: 50%;
-// }
+.about__item {
+  @include media-span($tablet, $desktop) {
+    &:not(:first-child) {
+      margin-top: $image-distance;
+    }
+  }
 
-// .about__pre-title {
-//   margin-bottom: $spacing-between-paragraphs;
-//   color: $primary-pre-title-color;
+  @include min-media($desktop) {
+    &:not(:first-child) {
+      margin-left: $image-distance;
+    }
+  }
+}
 
-//   &::before {
-//     background-color: $primary-pre-title-color;
-//   }
-// }
+.about__content {
+  @include min-media($tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 
-// .about__title {
-//   margin-bottom: $spacing-between-paragraphs;
-//   color: $primary-title-color;
-// }
+  @include min-media($desktop) {
+    padding-right: 60px;
+    padding-left: 34px;
+  }
+}
 
-// .about__text {
-//   margin-bottom: $spacing-between-paragraphs;
-// }
-// .about__detail {
-//   margin-bottom: 40px;
-// }
+.about__pre-title {
+  margin-bottom: $spacing-between-paragraphs;
+  color: $primary-pre-title-color;
+
+  &::before {
+    background-color: $primary-pre-title-color;
+  }
+}
+
+.about__title {
+  margin-bottom: $spacing-between-paragraphs;
+  color: $primary-title-color;
+
+  @include max-media($tablet) {
+    max-width: 330px;
+  }
+}
+
+.about__text {
+  margin-bottom: $spacing-between-paragraphs;
+}
+
+.about__detail {
+  margin-bottom: 40px;
+}

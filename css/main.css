@@ -82,6 +82,25 @@ button {
   }
 }
 
+.section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
 .btn {
   min-width: 160px;
   padding-top: 12px;
@@ -248,6 +267,20 @@ button {
   .font-text {
     font-size: 18px;
     line-height: 1.66667;
+  }
+}
+
+.font-title {
+  font-size: 28px;
+  line-height: 1.17857;
+  letter-spacing: 0.05em;
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  .font-title {
+    font-size: 42px;
+    line-height: 1.16667;
   }
 }
 
@@ -616,6 +649,13 @@ button {
   color: #ffffff;
 }
 
+@media screen and (max-width: 329px) {
+  .hero__title {
+    font-size: 46px;
+    line-height: 1.21739;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 72px;
@@ -628,6 +668,91 @@ button {
 }
 
 /* секция about */
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-top: 139px;
+    padding-bottom: 121px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about__list {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .about__list {
+    display: block;
+    list-style: none;
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .about__item:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__item:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__content {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__content {
+    padding-right: 60px;
+    padding-left: 34px;
+  }
+}
+
+.about__pre-title {
+  margin-bottom: 20px;
+  color: #303030;
+}
+
+.about__pre-title::before {
+  background-color: #303030;
+}
+
+.about__title {
+  margin-bottom: 20px;
+  color: #303030;
+}
+
+@media screen and (max-width: 767px) {
+  .about__title {
+    max-width: 330px;
+  }
+}
+
+.about__text {
+  margin-bottom: 20px;
+}
+
+.about__detail {
+  margin-bottom: 40px;
+}
+
 /* секция services */
 /* секция advantage */
 /* секция masters */

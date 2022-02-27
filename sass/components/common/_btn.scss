@@ -1,33 +1,28 @@
-// .btn {
-//   min-width: 160px;
-//   padding-top: 12px;
-//   padding-bottom: 12px;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   font-family: inherit;
-//   font-weight: 600;
-//   font-size: 12px;
-//   line-height: 1.33;
-//   letter-spacing: 0.09em;
-//   text-transform: uppercase;
-//   border: $border-btn;
-//   border-radius: 25px;
-//   cursor: pointer;
-//   transition: background-color $general-transition-time $primary-cubic-bezier,
-//     color $general-transition-time $primary-cubic-bezier;
-//   &:hover,
-//   &:focus {
-//     color: $accent-btn-text-color;
-//     background-color: $accent-btn-bg-color;
-//   }
-// }
+.btn {
+  min-width: 160px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include font(12px, 16px, 0.09em, 600, inherit);
+  text-transform: uppercase;
+  border: $border-btn;
+  border-radius: 25px;
+  transition: background-color $general-transition-time $primary-cubic-bezier,
+    color $general-transition-time $primary-cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $accent-btn-text-color;
+    background-color: $accent-btn-bg-color;
+  }
+}
 
-// .btn--first {
-//   color: $primary-btn-text-color;
-//   background-color: transparent;
-// }
+.btn--first {
+  color: $primary-btn-text-color;
+  background-color: transparent;
+}
 
-// .btn--second {
-//   color: $secondary-btn-text-color;
-//   background-color: transparent;
-// }
+.btn--second {
+  color: $secondary-btn-text-color;
+  background-color: transparent;
+}

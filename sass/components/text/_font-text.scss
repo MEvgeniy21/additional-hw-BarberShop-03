@@ -1,5 +1,7 @@
-// .font-text {
-//   font-size: 18px;
-//   line-height: 1.67;
-//   letter-spacing: 0.02em;
-// }
+.font-text {
+  @include font(16px, 26px, 0.02em);
+
+  //   font-size: 18px;
+  //   line-height: 1.67;
+  //   letter-spacing: 0.02em;
+}

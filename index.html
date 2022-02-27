@@ -25,7 +25,7 @@
     <header class="header">
       <div class="container header__container">
         <!-- Логотип -->
-        <a class="logo" href="./index.html" aria-label="Логотип">
+        <a class="logo header__logo" href="./index.html" aria-label="Логотип">
           <svg class="logo__icon" width="66" height="56">
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
@@ -39,14 +39,14 @@
           data-menu-button
         >
           <svg class="header__icon-btn" width="40" height="40">
-            <use class="header__icon-btn--close" href="./images/icons.svg#icon-close_40px"></use>
             <use class="header__icon-btn--menu" href="./images/icons.svg#icon-menu_40px"></use>
+            <use class="header__icon-btn--close" href="./images/icons.svg#icon-close_40px"></use>
           </svg>
         </button>
 
         <div class="header__menu" id="menu-container" data-menu>
           <!-- Навигация -->
-          <nav class="navigation">
+          <nav class="navigation header__navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a class="navigation__link navigation__link--active" href="./index.html">О нас</a>
@@ -68,6 +68,10 @@
             <!-- Кнопка -->
             <button class="btn btn--first header__btn" type="button">онлайн-запись</button>
           </div>
+          <ul class="info-list header__info-list">
+            <li class="info-list__item"><a class="info-list__link" href="">Instagram</a></li>
+            <li class="info-list__item"><a class="info-list__link" href="">Youtube</a></li>
+          </ul>
         </div>
       </div>
     </header>
@@ -86,8 +90,7 @@
             <p class="pre-title hero__pre-title">A hair salon for men in Kyiv</p>
             <h1 class="hero__title">BarberShop</h1>
             <p class="hero__text font-text">
-              Мы эксперты в модных мужских стрижках.<br />
-              Работаем быстро, осторожно и со вкусом.
+              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
             </p>
           </div>
         </div>

@@ -1,16 +1,27 @@
-// .navigation__list {
-//   @extend %list;
-//   display: flex;
-// }
+.navigation__list {
+  @include list();
+  //   display: flex;
+}
+
+.navigation__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
 
 // .navigation__item:not(:first-child) {
 //   margin-left: 40px;
 // }
 
-// .navigation__link {
-//   @include header-link(16px);
-// }
+.navigation__link {
+  //   @include header-link(16px);
+  @include link(null);
+  @include font(18px, 25px, 0.1em, 600);
+  color: $primary-title-color;
 
-// .navigation__link--active {
-//   color: $accent-text-color;
-// }
+  &--active,
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}

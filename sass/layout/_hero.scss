@@ -1,8 +1,5 @@
 /* секция hero */
 .hero {
-  //   padding-top: 208px;
-  //   padding-bottom: 183px;
-
   @include max-media($tablet) {
     max-width: $mobile;
     margin-left: auto;
@@ -34,9 +31,7 @@
 
   @include min-media($tablet) {
     @include flex-position(flex, end, null);
-    // display: flex;
     width: 97px;
-    // align-items: flex-end;
     padding-bottom: 40px;
   }
 }
@@ -50,17 +45,7 @@
 
 .hero__body {
   max-width: 306px;
-  //   max-width: 1073px;
-  //   flex-grow: 1;
-  //   padding-top: 272px;
-  //   padding-bottom: 206px;
-  //   padding-left: 96px;
-  //   padding-right: 452px;
-  //   background-color: $first-bg-color;
-  //   background-image: linear-gradient($hero-overlay, $hero-overlay), url(../images/slider-img-3.jpg);
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
+
   @include min-media($tablet) {
     max-width: 577px;
     padding-top: 280px;
@@ -79,6 +64,25 @@
         url(../images/hero/slider-img-3-577@2x.jpg);
     }
   }
+
+  @include min-media($desktop) {
+    max-width: 1073px;
+    padding-top: 272px;
+    padding-bottom: 208px;
+    padding-left: 96px;
+    padding-right: 500px;
+    background-color: $first-bg-color;
+    background-image: linear-gradient($hero-overlay, $hero-overlay),
+      url(../images/hero/slider-img-3-1073.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include retina() {
+      background-image: linear-gradient($hero-overlay, $hero-overlay),
+        url(../images/hero/slider-img-3-1073@2x.jpg);
+    }
+  }
 }
 
 .hero__pre-title {
@@ -93,10 +97,11 @@
 .hero__title {
   margin-bottom: $spacing-between-paragraphs;
   @include font(48px, 56px, 0.05em, null, $primary-title-font);
-  //   font-size: 72px;
-  //   line-height: 1.18;
-  //   letter-spacing: 0.05em;
   color: $hero-title-color;
+
+  @include min-media($desktop) {
+    @include font(72px, 85px);
+  }
 }
 
 .hero__text {

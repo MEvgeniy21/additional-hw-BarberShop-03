@@ -18,14 +18,15 @@
       margin-right: 24px;
     }
   }
+
+  @include min-media($desktop) {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
 }
 
-// .navigation__item:not(:first-child) {
-//   margin-left: 40px;
-// }
-
 .navigation__link {
-  //   @include header-link(16px);
   @include link(null);
   @include font(18px, 25px, 0.1em, 600);
   color: $primary-title-color;

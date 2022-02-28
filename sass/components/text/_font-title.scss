@@ -1,7 +1,3 @@
 .font-title {
-  @include font(28px, 33px, 0.05em, null, $primary-title-font);
-
-  @include min-media($desktop) {
-    @include font(42px, 49px);
-  }
+  @include font(42px, 49px, 0.05em, null, $primary-title-font);
 }

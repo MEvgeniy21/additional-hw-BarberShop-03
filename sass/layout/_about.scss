@@ -66,10 +66,18 @@
   @include max-media($tablet) {
     max-width: 330px;
   }
+
+  @include max-media($desktop) {
+    @include font(28px, 33px);
+  }
 }
 
 .about__text {
   margin-bottom: $spacing-between-paragraphs;
+
+  @include max-media($desktop) {
+    @include font(16px, 26px);
+  }
 }
 
 .about__detail {

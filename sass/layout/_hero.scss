@@ -106,4 +106,8 @@
 
 .hero__text {
   color: $hero-text-color;
+
+  @include max-media($desktop) {
+    @include font(16px, 26px);
+  }
 }

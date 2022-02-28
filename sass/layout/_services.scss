@@ -43,7 +43,6 @@
 
 .services__title {
   margin-bottom: $heading-distance;
-  @include font(42px, 49px);
   color: $secondary-title-color;
 }
 
@@ -122,14 +121,13 @@
 
 .services__text {
   color: $hero-text-color;
-  @include font(14px, 30px);
 
   &:first-child {
     order: -1;
   }
 
-  @include min-media($tablet) {
-    @include font(18px, 30px);
+  @include max-media($tablet) {
+    @include font(14px, 30px);
   }
 }
 

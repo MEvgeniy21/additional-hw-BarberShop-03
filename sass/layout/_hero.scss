@@ -71,12 +71,8 @@
     padding-bottom: 208px;
     padding-left: 96px;
     padding-right: 500px;
-    background-color: $first-bg-color;
     background-image: linear-gradient($hero-overlay, $hero-overlay),
       url(../images/hero/slider-img-3-1073.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
     @include retina() {
       background-image: linear-gradient($hero-overlay, $hero-overlay),

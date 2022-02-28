@@ -1,80 +1,140 @@
 /* секция services */
-// .services {
-//   max-width: 1280px;
-//   margin-right: auto;
-//   margin-left: auto;
-//   padding-top: 130px;
-//   padding-bottom: 130px;
-//   background-color: $services-bg-color;
-//   background-image: url(../images/services-img.png);
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-// }
+.services {
+  max-width: $mobile;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $services-bg-color;
+  background-image: url(../images/services/services-bg-480.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-// .services__pre-title {
-//   margin-bottom: $spacing-between-paragraphs;
-//   color: $hero-pre-title-color;
+  @include retina() {
+    background-image: url(../images/services/services-bg-480@2x.png);
+  }
 
-//   &::before {
-//     background-color: $hero-pre-title-color;
-//   }
-// }
+  @include min-media($tablet) {
+    max-width: $tablet;
+    background-image: url(../images/services/services-bg-768.png);
 
-// .services__title {
-//   margin-bottom: $heading-distance;
-//   color: $secondary-title-color;
-// }
+    @include retina() {
+      background-image: url(../images/services/services-bg-768@2x.png);
+    }
+  }
 
-// .services__content {
-//   display: flex;
-//   margin-bottom: 50px;
-// }
+  @include min-media($desktop) {
+    max-width: 1280px;
+    background-image: url(../images/services/services-bg-1280.png);
 
-// .services__list {
-//   flex-basis: 50%;
-//   padding-top: 30px;
-//   padding-bottom: 30px;
-//   padding-left: 40px;
-//   padding-right: 40px;
+    @include retina() {
+      background-image: url(../images/services/services-bg-1280@2x.png);
+    }
+  }
+}
 
-//   &:nth-child(odd) {
-//     background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-//   }
+.services__pre-title {
+  margin-bottom: $spacing-between-paragraphs;
+  color: $hero-pre-title-color;
 
-//   &:nth-child(even) {
-//     background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
-//   }
-// }
+  &::before {
+    background-color: $hero-pre-title-color;
+  }
+}
 
-// .services__item {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: baseline;
+.services__title {
+  margin-bottom: $heading-distance;
+  @include font(42px, 49px);
+  color: $secondary-title-color;
+}
 
-//   &::before {
-//     content: '';
-//     margin-left: 6px;
-//     margin-right: 6px;
-//     border-bottom: 1px solid rgba(157, 164, 189, 0.12);
-//     flex-grow: 1;
-//   }
+.services__content {
+  margin-bottom: 50px;
 
-//   &:not(:first-child) {
-//     margin-top: 20px;
-//   }
-// }
+  @include max-media($desktop) {
+    background-image: $services-gradient-light;
+  }
 
-// .services__text {
-//   color: $hero-text-color;
+  @include min-media($desktop) {
+    display: flex;
+  }
+}
 
-//   &:first-child {
-//     order: -1;
-//   }
-// }
+.services__list {
+  @include list();
+  padding-right: 30px;
+  padding-left: 30px;
 
-// .services__btn {
-//   display: block;
-//   margin-right: auto;
-//   margin-left: auto;
-// }
+  @include min-media($tablet) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include max-media($desktop) {
+    &:first-child {
+      padding-top: 30px;
+    }
+
+    &:last-child {
+      padding-bottom: 30px;
+    }
+  }
+
+  @include min-media($desktop) {
+    flex-basis: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &:nth-child(odd) {
+      background-image: $services-gradient-light;
+    }
+
+    &:nth-child(even) {
+      background-image: $services-gradient-dark;
+    }
+  }
+}
+
+.services__item {
+  @include flex-position(flex, baseline, space-between);
+
+  &::before {
+    content: '';
+    margin-left: 6px;
+    margin-right: 6px;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+    flex-grow: 1;
+  }
+
+  @include max-media($desktop) {
+    margin-bottom: 20px;
+
+    .services__list:last-child &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include min-media($desktop) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.services__text {
+  color: $hero-text-color;
+  @include font(14px, 30px);
+
+  &:first-child {
+    order: -1;
+  }
+
+  @include min-media($tablet) {
+    @include font(18px, 30px);
+  }
+}
+
+.services__btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

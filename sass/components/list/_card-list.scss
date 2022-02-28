@@ -1,34 +1,40 @@
-// .card-list {
-//   @extend %list;
-//   display: flex;
-//   margin-left: -1 * $image-distance;
-// }
+.card-list {
+  @include list();
 
-// .card-list__item {
-//   flex-basis: calc(100% / 3 - #{$image-distance});
-//   margin-left: $image-distance;
-// }
+  @include min-media($desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 
-// .card-list__img {
-//   @extend %img;
-//   margin-bottom: $image-distance;
-// }
+.card-list__item {
+  text-align: center;
 
-// .card-list__title {
-//   margin-bottom: 8px;
-//   font-weight: 400;
-//   font-size: 18px;
-//   line-height: 1.39;
-//   text-align: center;
-//   letter-spacing: 0.02em;
-//   color: $primary-title-color;
-// }
+  @include max-media($desktop) {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
 
-// .card-list__position {
-//   margin-bottom: $image-distance;
-//   font-size: 14px;
-//   line-height: 1.36;
-//   text-align: center;
-//   letter-spacing: 0.02em;
-//   color: $accent-text-color;
-// }
+  @include min-media($desktop) {
+    flex-basis: calc(100% / 3 - #{$image-distance});
+    margin: 15px;
+  }
+}
+
+.card-list__img {
+  margin-bottom: $image-distance;
+}
+
+.card-list__title {
+  margin-bottom: 8px;
+  @include font(18px, 25px, null, 400);
+  color: $primary-title-color;
+}
+
+.card-list__position {
+  margin-bottom: $image-distance;
+  @include font(14px, 19px);
+  color: $accent-text-color;
+}

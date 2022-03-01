@@ -63,7 +63,6 @@ button {
   padding-right: 31px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 768px) {
@@ -530,7 +529,7 @@ button {
 @media screen and (min-width: 768px) {
   .header__container {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     padding-top: 32px;
   }
 }
@@ -547,12 +546,14 @@ button {
     padding-left: 50px;
     background-color: #ffffff;
     overflow: hidden;
+    visibility: hidden;
     transform-origin: top right;
     transform: translateY(-100%);
-    transition: transform 250ms linear;
+    transition: visibility 250ms linear, transform 250ms linear;
   }
   .header__menu.is-open {
     transform: translateY(0);
+    visibility: visible;
     overflow: auto;
   }
 }
@@ -561,7 +562,7 @@ button {
   .header__menu {
     width: 100%;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     margin-left: 61px;
   }
@@ -730,6 +731,34 @@ button {
 }
 
 /* -------- FOOTER ------- */
+.footer {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__text {
+  color: #9da4bd;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__text {
+    padding-top: 35px;
+  }
+}
+
 /* секция hero */
 @media screen and (max-width: 767px) {
   .hero {

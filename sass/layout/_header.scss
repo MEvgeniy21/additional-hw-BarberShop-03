@@ -14,7 +14,7 @@
   }
 
   @include min-media($tablet) {
-    @include flex-position(flex, start, null);
+    @include flex-position(flex, flex-start, null);
     padding-top: 32px;
   }
 }
@@ -31,20 +31,23 @@
     padding-left: 50px;
     background-color: $primary-bg-color;
     overflow: hidden;
+    visibility: hidden;
     transform-origin: top right;
     transform: translateY(-100%);
 
-    transition: transform $general-transition-time $primary-cubic-bezier;
+    transition: visibility $general-transition-time $primary-cubic-bezier,
+      transform $general-transition-time $primary-cubic-bezier;
 
     &.is-open {
       transform: translateY(0);
+      visibility: visible;
       overflow: auto;
     }
   }
 
   @include min-media($tablet) {
     width: 100%;
-    @include flex-position(flex, start, space-between);
+    @include flex-position(flex, flex-start, space-between);
     margin-left: 61px;
   }
 

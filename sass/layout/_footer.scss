@@ -1,16 +1,22 @@
 /* -------- FOOTER ------- */
-// .footer {
-//   padding-top: 57px;
-//   padding-bottom: 55px;
-//   padding-left: 55px;
-//   padding-right: 55px;
-// }
+.footer {
+  padding-top: 44px;
+  padding-bottom: 44px;
 
-// .footer__container {
-//   display: flex;
-//   justify-content: space-between;
-// }
+  @include min-media($tablet) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
 
-// .footer__text {
-//   color: $hero-text-color;
-// }
+.footer__container {
+  @include flex-position(flex, flex-start, space-between);
+}
+
+.footer__text {
+  color: $hero-text-color;
+
+  @include max-media($tablet) {
+    padding-top: 35px;
+  }
+}

@@ -88,6 +88,10 @@
   &::before {
     background-color: $hero-pre-title-color;
   }
+
+  @include max-media(342px) {
+    font-size: 9px;
+  }
 }
 
 .hero__title {
@@ -96,7 +100,7 @@
   color: $hero-title-color;
 
   @include max-media(330px) {
-    @include font(46px, 56px);
+    font-size: 46px;
   }
 
   @include min-media($desktop) {
@@ -109,5 +113,9 @@
 
   @include max-media($desktop) {
     @include font(16px, 26px);
+  }
+
+  @include max-media(330px) {
+    font-size: 15px;
   }
 }

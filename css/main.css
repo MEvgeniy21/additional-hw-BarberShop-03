@@ -521,6 +521,12 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__wrap {
+    margin-top: 8px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .header__wrap {
     flex-direction: row;
@@ -542,17 +548,12 @@ button {
 
 @media screen and (min-width: 768px) {
   .header__link {
-    font-size: 12px;
-    line-height: 1.33333;
-    color: #ffffff;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header__link {
     display: block;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.33333;
+    color: #ffffff;
   }
 }
 
@@ -566,13 +567,6 @@ button {
     padding-left: 37px;
     padding-right: 37px;
     color: #303030;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .header__btn {
-    margin-top: 8px;
-    margin-bottom: 20px;
   }
 }
 
@@ -702,6 +696,12 @@ button {
   background-color: rgba(157, 164, 189, 0.6);
 }
 
+@media screen and (max-width: 341px) {
+  .hero__pre-title {
+    font-size: 9px;
+  }
+}
+
 .hero__title {
   margin-bottom: 20px;
   font-size: 48px;
@@ -714,7 +714,6 @@ button {
 @media screen and (max-width: 329px) {
   .hero__title {
     font-size: 46px;
-    line-height: 1.21739;
   }
 }
 
@@ -733,6 +732,12 @@ button {
   .hero__text {
     font-size: 16px;
     line-height: 1.625;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  .hero__text {
+    font-size: 15px;
   }
 }
 
@@ -1151,6 +1156,46 @@ button {
 }
 
 /* секция gallery */
+.gallery__pre-title {
+  margin-bottom: 44px;
+  color: #303030;
+}
+
+.gallery__pre-title::before {
+  background-color: #303030;
+}
+
+.gallery__list {
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
 /* Блок Feedback */
 /* секция online */
 /* секция contacts */

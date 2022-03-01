@@ -1,28 +1,35 @@
 /* секция gallery */
-// .gallery {
-//   padding-top: 130px;
-//   padding-bottom: 130px;
-// }
 
-// .gallery__pre-title {
-//   margin-bottom: $heading-distance;
-//   color: $primary-pre-title-color;
+.gallery__pre-title {
+  margin-bottom: $heading-distance;
+  color: $primary-pre-title-color;
 
-//   &::before {
-//     background-color: $primary-pre-title-color;
-//   }
-// }
+  &::before {
+    background-color: $primary-pre-title-color;
+  }
+}
 
-// .gallery__list {
-//   @extend %list;
-//   display: flex;
-//   margin-left: -1 * $image-distance;
-// }
+.gallery__list {
+  @include list();
 
-// .gallery__item {
-//   margin-left: $image-distance;
-// }
+  @include min-media($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 
-// .gallery__img {
-//   @extend %img;
-// }
+.gallery__item {
+  @include max-media($tablet) {
+    margin-bottom: $image-distance;
+  }
+
+  @include min-media($tablet) {
+    flex-basis: calc(100% / 2 - #{$image-distance});
+    margin: 15px;
+  }
+
+  @include min-media($desktop) {
+    flex-basis: calc(100% / 4 - #{$image-distance});
+  }
+}

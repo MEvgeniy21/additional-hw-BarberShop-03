@@ -1,71 +1,77 @@
-// .recording {
-//   padding-right: 40px;
-// }
+.recording__wrap {
+  @include min-media($tablet) {
+    @include flex-position(flex, null, space-between);
+    margin-bottom: $heading-distance;
+  }
+}
 
-// .recording__wrap {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-bottom: $heading-distance;
-// }
+.recording__label {
+  position: relative;
 
-// .recording__label {
-//   position: relative;
+  @include max-media($tablet) {
+    display: block;
+    margin-bottom: $heading-distance;
+  }
 
-//   &--textarea {
-//     display: block;
-//     margin-bottom: $heading-distance;
-//   }
-// }
+  @include min-media($tablet) {
+    flex-basis: calc((100% - #{$image-distance}) / 2);
+  }
 
-// .recording__text {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   font-weight: 600;
-//   font-size: 11px;
-//   line-height: 1.36;
-//   letter-spacing: 0.1em;
-//   text-transform: uppercase;
-//   color: $online-form-color;
-//   transition: transform $general-transition-time $primary-cubic-bezier,
-//     color $general-transition-time $primary-cubic-bezier;
+  &--textarea {
+    @include min-media($tablet) {
+      display: block;
+      margin-bottom: $heading-distance;
+    }
+  }
+}
 
-//   .recording__input:focus + &,
-//   .recording__input:hover + & {
-//     color: $first-text-color;
-//   }
+.recording__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include font(11px, 15px, 0.1em, 600);
+  text-transform: uppercase;
+  color: $online-form-color;
+  transition: transform $general-transition-time $primary-cubic-bezier,
+    color $general-transition-time $primary-cubic-bezier;
 
-//   .recording__input:focus + &,
-//   .recording__input:not(:placeholder-shown) + & {
-//     transform: translateY(-2em);
-//   }
-// }
+  .recording__input:focus + &,
+  .recording__input:hover + & {
+    color: $first-text-color;
+  }
 
-// .recording__input {
-//   height: 24px;
-//   color: $hero-text-color;
-//   background-color: transparent;
-//   border: none;
-//   border-bottom: 1px solid $online-form-color;
-//   transition: border $general-transition-time $primary-cubic-bezier,
-//     color $general-transition-time $primary-cubic-bezier;
+  .recording__input:focus + &,
+  .recording__input:not(:placeholder-shown) + & {
+    transform: translateY(-2em);
+  }
+}
 
-//   &[type='text'] {
-//     width: 270px;
-//   }
+.recording__input {
+  display: block;
+  width: 100%;
+  height: 24px;
+  color: $hero-text-color;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $online-form-color;
+  transition: border $general-transition-time $primary-cubic-bezier,
+    color $general-transition-time $primary-cubic-bezier;
 
-//   &[type='tel'] {
-//     width: 260px;
-//   }
+  &:focus,
+  &:hover {
+    border-bottom-color: $first-text-color;
+  }
 
-//   &--textarea {
-//     width: 100%;
-//     height: 76px;
-//     resize: none;
-//   }
+  &--textarea {
+    height: 76px;
+    resize: none;
+  }
+}
 
-//   &:focus,
-//   &:hover {
-//     border-bottom-color: $first-text-color;
-//   }
-// }
+.recording__btn {
+  @include max-media($tablet) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

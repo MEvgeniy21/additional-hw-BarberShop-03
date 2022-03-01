@@ -1,9 +1,23 @@
 /* секция online */
-// .online {
-//   width: calc((100% + #{$image-distance}) / 2);
-// }
+.online {
+  @include min-media($desktop) {
+    width: calc((100% - #{$image-distance}) / 2);
+  }
+}
 
-// .online__title {
-//   color: $secondary-title-color;
-//   margin-bottom: $heading-distance;
-// }
+.online__container {
+  @include min-media($desktop) {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.online__title {
+  color: $secondary-title-color;
+  margin-bottom: $heading-distance;
+
+  @include max-media($tablet) {
+    text-align: center;
+  }
+}

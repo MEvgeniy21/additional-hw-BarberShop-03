@@ -458,7 +458,7 @@
       </section>
       <!-- Секция галерея -->
       <section class="gallery section">
-        <div class="container">
+        <div class="container gallery__container">
           <h2 class="visually-hidden">Галерея барберов</h2>
           <p class="gallery__pre-title pre-title">На латинском языке “барба” означает “борода”</p>
           <ul class="gallery__list">
@@ -572,87 +572,93 @@
       <div class="feedback">
         <div class="container feedback__container">
           <!-- Секция онлайн-запись -->
-          <section class="online">
-            <h2 class="online__title font-title">Онлайн-запись</h2>
-            <form class="recording">
-              <div class="recording__wrap">
-                <label class="recording__label">
-                  <input
-                    class="recording__input"
-                    type="text"
-                    name="recording-name"
+          <section class="online section">
+            <div class="container online__container">
+              <h2 class="online__title font-title">Онлайн-запись</h2>
+              <form class="recording">
+                <div class="recording__wrap">
+                  <label class="recording__label">
+                    <input
+                      class="recording__input"
+                      type="text"
+                      name="recording-name"
+                      placeholder=" "
+                      required
+                    />
+                    <span class="recording__text">Имя*</span>
+                  </label>
+                  <label class="recording__label">
+                    <input
+                      class="recording__input"
+                      type="tel"
+                      name="recording-tel"
+                      placeholder=" "
+                      required
+                    />
+                    <span class="recording__text">Телефон*</span>
+                  </label>
+                </div>
+                <label class="recording__label recording__label--textarea">
+                  <textarea
+                    class="recording__input recording__input--textarea"
+                    name="recording-comment"
                     placeholder=" "
-                    required
-                  />
-                  <span class="recording__text">Имя*</span>
+                  ></textarea>
+                  <span class="recording__text">Сообщение</span>
                 </label>
-                <label class="recording__label">
-                  <input
-                    class="recording__input"
-                    type="tel"
-                    name="recording-tel"
-                    placeholder=" "
-                    required
-                  />
-                  <span class="recording__text">Телефон*</span>
-                </label>
-              </div>
-              <label class="recording__label recording__label--textarea">
-                <textarea
-                  class="recording__input recording__input--textarea"
-                  name="recording-comment"
-                  placeholder=" "
-                ></textarea>
-                <span class="recording__text">Сообщение</span>
-              </label>
-              <button class="btn btn--first" type="submit">Отправить</button>
-            </form>
+                <button class="btn btn--first recording__btn" type="submit">Отправить</button>
+              </form>
+            </div>
           </section>
           <!-- Секция контакты -->
-          <section id="contacts" class="contacts">
-            <div class="contacts__wrap">
+          <section id="contacts" class="contacts section">
+            <div class="container contacts__container">
               <h2 class="contacts__title font-title">Контакты</h2>
-              <address class="address">
-                <ul class="address__list">
-                  <li class="address__item">
-                    <a
-                      class="address__link contacts__text font-text"
-                      href="https://goo.gl/maps/YjysKKPajJtUrSyb9"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow "
-                      aria-label="Адрес"
-                      ><svg class="address__icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-map-pin"></use>
-                      </svg>
-                      ул. Васильковская, 7А Киев, 08132</a
-                    >
-                  </li>
-                  <li class="address__item">
-                    <a
-                      class="address__link contacts__text font-text"
-                      href="tel:+380441111111"
-                      aria-label="Телефон"
-                      ><svg class="address__icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-phone"></use>
-                      </svg>
-                      +38 044 111 11 11</a
-                    >
-                  </li>
-                  <li class="address__item">
-                    <a
-                      class="address__link contacts__text font-text address__link--email"
-                      href="mailto:barbershop@email.com"
-                      aria-label="Электронная почта"
-                      ><svg class="address__icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-mail"></use>
-                      </svg>
-                      barbershop@email.com</a
-                    >
-                  </li>
-                </ul>
-              </address>
-              <p class="contacts__pre-title pre-title">время работы</p>
-              <p class="contacts__text font-text">Ежедневно с 9:00 до 22:00</p>
+              <div class="contacts__box">
+                <address class="address contacts__address">
+                  <ul class="address__list">
+                    <li class="address__item">
+                      <a
+                        class="address__link contacts__text font-text"
+                        href="https://goo.gl/maps/YjysKKPajJtUrSyb9"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow "
+                        aria-label="Адрес"
+                        ><svg class="address__icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-map-pin"></use>
+                        </svg>
+                        ул. Васильковская, 7А Киев, 08132</a
+                      >
+                    </li>
+                    <li class="address__item">
+                      <a
+                        class="address__link contacts__text font-text"
+                        href="tel:+380441111111"
+                        aria-label="Телефон"
+                        ><svg class="address__icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                        +38 044 111 11 11</a
+                      >
+                    </li>
+                    <li class="address__item">
+                      <a
+                        class="address__link contacts__text font-text address__link--email"
+                        href="mailto:barbershop@email.com"
+                        aria-label="Электронная почта"
+                        ><svg class="address__icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-mail"></use>
+                        </svg>
+                        barbershop@email.com</a
+                      >
+                    </li>
+                  </ul>
+                </address>
+                <div class="contacts__wrap">
+                  <p class="contacts__pre-title pre-title">время работы</p>
+                  <p class="contacts__text font-text">Ежедневно с 9:00 до 22:00</p>
+                </div>
+              </div>
             </div>
           </section>
         </div>

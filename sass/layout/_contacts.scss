@@ -1,28 +1,71 @@
 /* секция contacts */
-// .contacts {
-//   width: calc((100% - #{$image-distance}) / 2);
-//   padding-left: 100px;
-// }
+.contacts {
+  @include max-media($desktop) {
+    max-width: $mobile;
+    background-image: url(../images/contacts/contacts-bg-480.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-// .contacts__wrap {
-//   width: 270px;
-//   margin-right: auto;
-// }
+    @include retina() {
+      background-image: url(../images/contacts/contacts-bg-480@2x.png);
+    }
+  }
 
-// .contacts__title {
-//   color: $secondary-title-color;
-//   margin-bottom: 40px;
-// }
+  @include media-span($tablet, $desktop) {
+    max-width: $tablet;
+    background-image: url(../images/contacts/contacts-bg-768.png);
 
-// .contacts__pre-title {
-//   color: $secondary-title-color;
-//   margin-bottom: $spacing-between-paragraphs;
+    @include retina() {
+      background-image: url(../images/contacts/contacts-bg-768@2x.png);
+    }
+  }
 
-//   &::before {
-//     background-color: $hero-text-color;
-//   }
-// }
+  @include min-media($desktop) {
+    width: calc((100% - #{$image-distance}) / 2);
+    padding-left: 100px;
+  }
+}
 
-// .contacts__text {
-//   color: $hero-text-color;
-// }
+.contacts__container {
+  @include min-media($desktop) {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.contacts__box {
+  @include media-span($tablet, $desktop) {
+    display: flex;
+  }
+}
+
+.contacts__address,
+.contacts__wrap {
+  @include media-span($tablet, $desktop) {
+    flex-basis: 50%;
+  }
+}
+
+.contacts__title {
+  color: $secondary-title-color;
+  margin-bottom: 40px;
+
+  @include max-media($tablet) {
+    text-align: center;
+  }
+}
+
+.contacts__pre-title {
+  color: $secondary-title-color;
+  margin-bottom: $spacing-between-paragraphs;
+
+  &::before {
+    background-color: $hero-text-color;
+  }
+}
+
+.contacts__text {
+  color: $hero-text-color;
+}

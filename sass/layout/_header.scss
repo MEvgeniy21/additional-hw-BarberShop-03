@@ -86,11 +86,13 @@
     &--close {
       color: $primary-title-color;
       opacity: 0;
-      transition: opacity $general-transition-time $primary-cubic-bezier,
-        color $general-transition-time $primary-cubic-bezier;
+      transition: opacity $general-transition-time $primary-cubic-bezier 0ms,
+        color $general-transition-time $primary-cubic-bezier 0ms;
 
       .header__btn-menu.is-open & {
         opacity: 1;
+        transition: opacity $general-transition-time $primary-cubic-bezier $general-transition-time,
+          color $general-transition-time $primary-cubic-bezier 0ms;
       }
 
       .header__btn-menu:hover &,
@@ -102,10 +104,13 @@
     &--menu {
       color: $hero-title-color;
       opacity: 1;
-      transition: opacity $general-transition-time $primary-cubic-bezier,
-        color $general-transition-time $primary-cubic-bezier;
+      transition: opacity $general-transition-time $primary-cubic-bezier $general-transition-time,
+        color $general-transition-time $primary-cubic-bezier 0ms;
+
       .header__btn-menu.is-open & {
         opacity: 0;
+        transition: opacity $general-transition-time $primary-cubic-bezier 0ms,
+          color $general-transition-time $primary-cubic-bezier 0ms;
       }
 
       .header__btn-menu:hover &,
@@ -146,6 +151,7 @@
   @include link(null);
   @include font(18px, 25px, 0.1em, 600);
   color: $primary-title-color;
+  transition: color $general-transition-time $primary-cubic-bezier;
 
   &:hover,
   &:focus {

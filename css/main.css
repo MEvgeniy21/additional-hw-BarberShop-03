@@ -224,6 +224,7 @@ button {
   letter-spacing: 0.1em;
   font-weight: 600;
   color: #303030;
+  transition: color 250ms linear;
 }
 
 @media screen and (min-width: 768px) {
@@ -612,10 +613,11 @@ button {
   .header__icon-btn--close {
     color: #303030;
     opacity: 0;
-    transition: opacity 250ms linear, color 250ms linear;
+    transition: opacity 250ms linear 0ms, color 250ms linear 0ms;
   }
   .header__btn-menu.is-open .header__icon-btn--close {
     opacity: 1;
+    transition: opacity 250ms linear 250ms, color 250ms linear 0ms;
   }
   .header__btn-menu:hover .header__icon-btn--close,
   .header__btn-menu:focus .header__icon-btn--close {
@@ -624,10 +626,11 @@ button {
   .header__icon-btn--menu {
     color: #ffffff;
     opacity: 1;
-    transition: opacity 250ms linear, color 250ms linear;
+    transition: opacity 250ms linear 250ms, color 250ms linear 0ms;
   }
   .header__btn-menu.is-open .header__icon-btn--menu {
     opacity: 0;
+    transition: opacity 250ms linear 0ms, color 250ms linear 0ms;
   }
   .header__btn-menu:hover .header__icon-btn--menu,
   .header__btn-menu:focus .header__icon-btn--menu {
@@ -675,6 +678,7 @@ button {
   letter-spacing: 0.1em;
   font-weight: 600;
   color: #303030;
+  transition: color 250ms linear;
 }
 
 .header__link:hover, .header__link:focus {

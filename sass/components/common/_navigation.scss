@@ -30,6 +30,7 @@
   @include link(null);
   @include font(18px, 25px, 0.1em, 600);
   color: $primary-title-color;
+  transition: color $general-transition-time $primary-cubic-bezier;
 
   @include min-media($tablet) {
     @include link(block, 20px, null);

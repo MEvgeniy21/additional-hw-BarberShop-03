@@ -13,7 +13,7 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.85714;
   letter-spacing: 0.02em;
   font-weight: 400;
@@ -103,7 +103,7 @@ button {
 .pre-title {
   display: flex;
   align-items: center;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.36364;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -118,20 +118,20 @@ button {
 }
 
 .font-info {
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.36364;
   letter-spacing: 0.2em;
   font-weight: 600;
 }
 
 .font-text {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.66667;
   letter-spacing: 0.02em;
 }
 
 .font-title {
-  font-size: 42px;
+  font-size: 2.625rem;
   line-height: 1.16667;
   letter-spacing: 0.05em;
   font-family: "Raleway", sans-serif;
@@ -143,7 +143,7 @@ button {
   padding-bottom: 12px;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.33333;
   letter-spacing: 0.09em;
   font-weight: 600;
@@ -219,7 +219,7 @@ button {
 
 .navigation__link {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.38889;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -232,7 +232,7 @@ button {
     display: block;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.33333;
     color: #ffffff;
   }
@@ -356,7 +356,7 @@ button {
 
 .card-list__title {
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.38889;
   font-weight: 400;
   color: #303030;
@@ -364,7 +364,7 @@ button {
 
 .card-list__position {
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.35714;
   color: #ff6c00;
 }
@@ -437,7 +437,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.36364;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -673,7 +673,7 @@ button {
 
 .header__link {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.38889;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -690,7 +690,7 @@ button {
     display: block;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.33333;
     color: #ffffff;
   }
@@ -723,7 +723,7 @@ button {
   .header__info-list {
     display: flex;
     flex-wrap: wrap;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.35714;
     letter-spacing: 0.2em;
     font-weight: 600;
@@ -865,13 +865,13 @@ button {
 
 @media screen and (max-width: 341px) {
   .hero__pre-title {
-    font-size: 9px;
+    font-size: 0.5625rem;
   }
 }
 
 .hero__title {
   margin-bottom: 20px;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.16667;
   letter-spacing: 0.05em;
   font-family: "Raleway", sans-serif;
@@ -880,13 +880,13 @@ button {
 
 @media screen and (max-width: 329px) {
   .hero__title {
-    font-size: 46px;
+    font-size: 2.875rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__title {
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 1.18056;
   }
 }
@@ -897,14 +897,14 @@ button {
 
 @media screen and (max-width: 1199px) {
   .hero__text {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.625;
   }
 }
 
 @media screen and (max-width: 329px) {
   .hero__text {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -988,7 +988,7 @@ button {
 
 @media screen and (max-width: 1199px) {
   .about__title {
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1.17857;
   }
 }
@@ -999,7 +999,7 @@ button {
 
 @media screen and (max-width: 1199px) {
   .about__text {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.625;
   }
 }
@@ -1026,27 +1026,27 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .services {
     max-width: 768px;
     background-image: url(../images/services/services-bg-768.png);
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .services {
     background-image: url(../images/services/services-bg-768@2x.png);
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .services {
     max-width: 1280px;
     background-image: url(../images/services/services-bg-1280.png);
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .services {
     background-image: url(../images/services/services-bg-1280@2x.png);
   }
@@ -1157,7 +1157,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .services__text {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 2.14286;
   }
 }
@@ -1265,7 +1265,7 @@ button {
   position: relative;
   display: inline-block;
   margin-bottom: 6px;
-  font-size: 42px;
+  font-size: 2.625rem;
   line-height: 1.35714;
   letter-spacing: 0.05em;
   font-weight: 700;
@@ -1278,7 +1278,7 @@ button {
   top: 7px;
   right: -2px;
   transform: translateX(100%);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.375;
   font-weight: 600;
   color: #ff6c00;
@@ -1288,7 +1288,7 @@ button {
   max-width: 130px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.36364;
   letter-spacing: 0.01em;
   font-weight: 600;

@@ -90,7 +90,7 @@
   }
 
   @include max-media(342px) {
-    font-size: 9px;
+    @include font(9px);
   }
 }
 
@@ -100,7 +100,7 @@
   color: $hero-title-color;
 
   @include max-media(330px) {
-    font-size: 46px;
+    @include font(46px);
   }
 
   @include min-media($desktop) {
@@ -116,6 +116,6 @@
   }
 
   @include max-media(330px) {
-    font-size: 15px;
+    @include font(15px);
   }
 }

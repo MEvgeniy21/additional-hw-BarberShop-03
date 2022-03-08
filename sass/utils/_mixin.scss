@@ -17,7 +17,12 @@
 }
 
 @mixin font($fs: null, $lh: null, $ls: null, $fw: null, $ff: null) {
-  font-size: $fs;
+  @if ($fs == inherit) or ($fs == null) {
+    font-size: $fs;
+  } @else {
+    $fs-rem: $fs / 16px;
+    font-size: #{$fs-rem}rem;
+  }
   @if ($fs == inherit) or ($fs == null) or ($lh == inherit) or ($lh == null) {
     line-height: $lh;
   } @else {
